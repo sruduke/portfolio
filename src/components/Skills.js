@@ -219,7 +219,7 @@ return (
                 <SkillPiece displayTitle="C" img={c}></SkillPiece>
                 <SkillPiece displayTitle="Bash" img={bash}></SkillPiece>
             </Row>
-            <Row className="top-padding right" xs={12} md={6} xl={6}>
+            <Row className="top-padding left" xs={12} md={6} xl={6}>
                 <h3>Web Development</h3>
                 <SkillPiece displayTitle="HTML" img={html}></SkillPiece>
                 <SkillPiece displayTitle="CSS" img={css}></SkillPiece>
@@ -234,7 +234,7 @@ return (
                 <SkillPiece displayTitle="Postgres" img={postgres}></SkillPiece>
                 <SkillPiece displayTitle="MongoDB" img={mongodb}></SkillPiece>
             </Row>
-            <Row className="top-padding right" xs={16} md={8} xl={6}>
+            <Row className="top-padding left" xs={16} md={8} xl={6}>
                 <h3 className="top-padding-20">Virtualization</h3>
                 <SkillPiece displayTitle="Docker" img={docker}></SkillPiece>
                 <SkillPiece displayTitle="Proxmox" img={proxmox}></SkillPiece>

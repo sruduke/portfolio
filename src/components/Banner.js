@@ -49,21 +49,21 @@ export const Banner = () => {
 
     return (
         <section className="banner" id="aboutme">
-            <Container>
-                <Row className="align-items-center">
-                    <div className="flex" style={{width: "80%"}}>
-                        {/* <span className="tagline">printf("Hello World!");</span> */}
+            <Container style={{width: "80%"}}>
+                <Row className="d-flex mx-auto align-items-center" style={{width: "85%"}}> 
+                    <Col lg={9}>
                         <h1>Hello World! <br></br> I'm Sophia Ruduke</h1>
-                        <div style={{height: '5em'}}><h2 style={{height: '100%'}}>{text}</h2></div>
-                    </div>
-                    {/* <Col xs={12} md={6} xl={7}> */}
-                    {/* </Col> */}
-                    {/* <Col xs={12} md={6} xl={4}> */}
-                    <div className="flex" style={{width: "20%"}}>
+                        {/* <div style={{height: '5em'}}><h2 style={{height: '100%'}}>{text}</h2></div> */}
+                        <div style={{height: "5vh"}}><h2>{text}</h2></div>
+                    </Col>
+                    <Col className="justify-content-left">
                         <img src={headShot} alt="developer" className="img-fluid" />
-                    </div>
-                    <p>Hi, I'm Sophia Ruduke. I just received my BSc in Computing Science with Specialization at the University of Alberta.   a software developer based in Nairobi, Kenya. I have a passion for web development and love to create web applications that are user-friendly and visually appealing. I have experience working with JavaScript, React, Node.js, and MongoDB. I am always eager to learn new technologies and improve my skills.</p>
-                    {/* </Col> */}
+                    </Col>
+                </Row>
+                <Row style={{paddingTop: "8vh", paddingBottom: "15vh"}}>
+                    <Col>
+                        <p>Hi, I'm Sophia Ruduke. I just received my BSc in Computing Science with Specialization at the University of Alberta.   a software developer based in Nairobi, Kenya. I have a passion for web development and love to create web applications that are user-friendly and visually appealing. I have experience working with JavaScript, React, Node.js, and MongoDB. I am always eager to learn new technologies and improve my skills.</p>
+                    </Col>
                 </Row>
             </Container>
         </section>
