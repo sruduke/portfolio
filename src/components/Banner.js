@@ -51,15 +51,19 @@ export const Banner = () => {
         <section className="banner" id="aboutme">
             <Container>
                 <Row className="align-items-center">
-                    <Col xs={12} md={6} xl={7}>
+                    <div className="flex" style={{width: "80%"}}>
                         {/* <span className="tagline">printf("Hello World!");</span> */}
                         <h1>Hello World! <br></br> I'm Sophia Ruduke</h1>
                         <div style={{height: '5em'}}><h2 style={{height: '100%'}}>{text}</h2></div>
-                        <p>Hi, I'm Sophia Ruduke. I just received my BSc in Computing Science with Specialization at the University of Alberta.   a software developer based in Nairobi, Kenya. I have a passion for web development and love to create web applications that are user-friendly and visually appealing. I have experience working with JavaScript, React, Node.js, and MongoDB. I am always eager to learn new technologies and improve my skills.</p>
-                    </Col>
-                    <Col xs={12} md={6} xl={4}>
+                    </div>
+                    {/* <Col xs={12} md={6} xl={7}> */}
+                    {/* </Col> */}
+                    {/* <Col xs={12} md={6} xl={4}> */}
+                    <div className="flex" style={{width: "20%"}}>
                         <img src={headShot} alt="developer" className="img-fluid" />
-                    </Col>
+                    </div>
+                    <p>Hi, I'm Sophia Ruduke. I just received my BSc in Computing Science with Specialization at the University of Alberta.   a software developer based in Nairobi, Kenya. I have a passion for web development and love to create web applications that are user-friendly and visually appealing. I have experience working with JavaScript, React, Node.js, and MongoDB. I am always eager to learn new technologies and improve my skills.</p>
+                    {/* </Col> */}
                 </Row>
             </Container>
         </section>
