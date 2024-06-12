@@ -73,6 +73,12 @@ const SkillPieceInverted = ({displayTitle, img, round=false}) => {
     }
 }
 
+const CarouselItem = ({title, gaugeNum}) => {
+    return (<div className="carouselItem hidden">
+                <p>{title}</p>
+                <img src={gaugeNum} alt="gauge"/>
+            </div>)};
+
 const skillRow = (displayTitle, pieces) => {
     return (
         <Row>
@@ -171,46 +177,16 @@ return (
             <h3>Skills</h3>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
             <Carousel customLeftArrow={<CustomLeftArrow />} customRightArrow={<CustomRightArrow />} responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                <div className="item hidden">
-                    <h5>PROCEDURAL PROGRAMMING</h5>
-                    <img src={gauge95} alt="gauge80" />
-                </div>
-                <div className="item hidden">
-                    <h5>OBJECT-ORIENTED PROGRAMMING</h5>
-                    <img src={gauge85} alt="gauge80" />
-                </div>
-                <div className="item hidden">
-                    <h5>FUNCTIONAL PROGRAMMING</h5>
-                    <img src={gauge90} alt="gauge80" />
-                </div>
-                <div className="item hidden">
-                    <h5>REST APIs</h5>
-                    <img src={gauge85} alt="gauge80" />
-                </div>
-                <div className="item hidden">
-                    <h5>TESTING</h5>
-                    <img src={gauge90} alt="gauge80" />
-                </div>
-                <div className="item hidden">
-                    <h5>AUTOMATION</h5>
-                    <img src={gauge90} alt="gauge80" />
-                </div>
-                <div className="item hidden">
-                    <h5>SYSTEM ADMIN</h5>
-                    <img src={gauge85} alt="gauge80" />
-                </div>
-                <div className="item hidden">
-                    <h5>CLIENT RELATIONS</h5>
-                    <img src={gauge95} alt="gauge80" />
-                </div>
-                <div className="item hidden">
-                    <h5>VIRTUALIZATION</h5>
-                    <img src={gauge90} alt="gauge80" />
-                </div>
-                <div className="item hidden">
-                    <h5>LEARNING NEW THINGS</h5>
-                    <img src={gauge100} alt="gauge80" />
-                </div>
+                <CarouselItem title={"Procedural Programming".toUpperCase()} gaugeNum={gauge95}></CarouselItem>
+                <CarouselItem title={"Object-Oriented Programming".toUpperCase()} gaugeNum={gauge85}></CarouselItem>
+                <CarouselItem title={"Functional Programming".toUpperCase()} gaugeNum={gauge90}></CarouselItem>
+                <CarouselItem title={"REST APIs"} gaugeNum={gauge85}></CarouselItem>
+                <CarouselItem title={"Testing".toUpperCase()} gaugeNum={gauge90}></CarouselItem>
+                <CarouselItem title={"Automation".toUpperCase()} gaugeNum={gauge90}></CarouselItem>
+                <CarouselItem title={"System Admin".toUpperCase()} gaugeNum={gauge85}></CarouselItem>
+                <CarouselItem title={"Client Relations".toUpperCase()} gaugeNum={gauge95}></CarouselItem>
+                <CarouselItem title={"Virtualization".toUpperCase()} gaugeNum={gauge90}></CarouselItem>
+                <CarouselItem title={"Learning New Things".toUpperCase()} gaugeNum={gauge100}></CarouselItem>
             </Carousel>
             <Row className="top-padding left" xs={12} md={6} xl={6}>
                 <h3>Programming Languages</h3>
