@@ -7,10 +7,10 @@ import AnimateOnScroll from './AnimateOnScroll';
 
 // IMAGES
 import gauge80 from '../assets/img/gauge_80.svg';
-import gauge85 from '../assets/img/gauge_85.svg';
-import gauge90 from '../assets/img/gauge_90.svg';
-import gauge95 from '../assets/img/gauge_95.svg';
-import gauge100 from '../assets/img/gauge_100.svg';
+import gauge85 from '../assets/img/gauge85.png';
+import gauge90 from '../assets/img/gauge90.png';
+import gauge95 from '../assets/img/gauge95.png';
+import gauge100 from '../assets/img/gauge100.png';
 
 import python from '../assets/img/python.png';
 import java from '../assets/img/java.svg';
@@ -74,9 +74,9 @@ const SkillPieceInverted = ({displayTitle, img, round=false}) => {
 }
 
 const CarouselItem = ({title, gaugeNum}) => {
-    return (<div className="carouselItem hidden">
-                <p>{title}</p>
+    return (<div className="carouselItemNew hidden">
                 <img src={gaugeNum} alt="gauge"/>
+                <h5>{title}</h5>
             </div>)};
 
 const skillRow = (displayTitle, pieces) => {
@@ -174,7 +174,7 @@ export const Skills = () => {
 return (
     <section className="skill" id="skills">
         <div className="skill-bx wow zoomIn">
-            <h3>Skills</h3>
+            <h2>Skills</h2>
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
             <Carousel customLeftArrow={<CustomLeftArrow />} customRightArrow={<CustomRightArrow />} responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                 <CarouselItem title={"Procedural Programming".toUpperCase()} gaugeNum={gauge95}></CarouselItem>
