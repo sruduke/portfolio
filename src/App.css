@@ -497,6 +497,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .skillPiece img {
   width: 8em;
   height: 8em;
+  margin-top: 3vh;
 }
 
 .skillPiece h5 {
@@ -577,6 +578,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .proj-txt {
   position: absolute;
   text-align: center;
+  color: white;
   top: 65%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -599,4 +601,23 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 400;
   font-size: 15px;
   letter-spacing: 0.8px;
+}
+
+.project-modal {
+  margin-top: 4%;
+  padding-bottom: 5%;
+}
+
+.project-modal h4 {
+  color:rgba(255, 83, 246, 0.94);
+}
+
+.project-modal h5 {
+  /* font-weight: 700; */
+  color:rgba(200, 83, 255, 0.94);
+}
+
+.project-popup {
+  background-color: #1a1a1a;
+  color: white;
 }

@@ -1,4 +1,8 @@
+import { ProjectModal } from "./Modal";
+import { ProjectCard } from "./ProjectCard";
 import { Container, Row, Col, Image} from "react-bootstrap";
+import { useState, useEffect } from "react";
+import Button from 'react-bootstrap/Button';
 import background from '../assets/img/binary_gauss.jpg';
 import baseball from '../assets/img/baseball.png';
 import chimpchat from '../assets/img/chimpchat.png';
@@ -6,50 +10,55 @@ import alarmrat from '../assets/img/alarm-rat.png';
 import lights from '../assets/img/lights.png';
 import testing from '../assets/img/testing.png';
 
-const ProjectCard = ({title, description, image, url}) => {
-    return (
-        <Col sm={6} md={6} lg={4} className="d-flex mx-auto align-items-center">
-            <div className="proj-imgbx">
-                <img src={image} />
-                <div className="proj-txt">
-                    <h4>{title}</h4>
-                    <span>{description}</span>
-                    <a href={url}>View Project</a>
-                </div>
-            </div>
-        </Col>
-    )
-}
+
 
 export const Projects = () => {
 
     const projects = [
         {title: 'Baseball App',
-        description: 'This is a project',
         image: baseball,
-        url: 'https://www.google.com'},
+        description: 'This is a project',
+        technologies: ['React', 'Node', 'Express'],
+        modalImages: [baseball]},
 
         {title: 'Alarm Rationalization',
-        description: 'This is a project',
         image: alarmrat,
-        url: 'https://www.google.com'},
+        description: 'This is a project',
+        technologies: ['React', 'Node', 'Express'],
+        modalImages: [alarmrat]},
 
         {title: 'ChimpChat',
-        description: 'This is a project',
         image: chimpchat,
-        url: 'https://www.google.com'}, 
+        description: 'This is a project',
+        technologies: ['React', 'Node', 'Express'],
+        modalImages: [chimpchat]},
 
         {title: 'Automated Testing Suite',
-        description: 'This is a project',
         image: testing,
-        url: 'https://www.google.com'},
+        description: 'This is a project',
+        technologies: ['React', 'Node', 'Express'],
+        modalImages: [testing]},
 
         {title: 'Arduino LED Light Controller',
-        description: 'This is a project',
         image: lights,
-        url: 'https://www.google.com'},
+        description: 'This is a project',
+        technologies: ['React', 'Node', 'Express'],
+        modalImages: [lights]}
     ];
+    
+    const [modalShow, setModalShow] = useState(false);
+    const [modalContent, setModalContent] = useState({
+        title: '',
+        description: '',
+        technologies: [],
+        modalImages: []
+        });
 
+    const handleCardClick = (project) => {
+        setModalContent(project);
+        setModalShow(true);
+    };
+    
     return (
         <section className="projects" id="projects">
             <Container>
@@ -57,10 +66,27 @@ export const Projects = () => {
                 <Row>
                     {projects.map((project, index) => {
                         return (
-                            <ProjectCard key={index} title={project.title} description={project.description} image={project.image} url={project.url}/>
+                            <ProjectCard 
+                                key={index} 
+                                title={project.title} 
+                                image={project.image}
+                                description={project.description}
+                                technologies={project.technologies}
+                                modalImages={project.modalImages}
+                                onClick={() => handleCardClick(project)}
+                                />
                         )
                     })}
+               <ProjectModal
+                title={modalContent.title}
+                description={modalContent.description}
+                technologies={modalContent.technologies}
+                images={modalContent.modalImages}
+                show={modalShow}
+                onHide={() => setModalShow(false)}
+                />
                 </Row>
+               
             </Container>
         </section>
     )

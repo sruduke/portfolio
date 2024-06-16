@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import { useState, useEffect } from "react";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headShot from '../assets/img/headshot.jpg';
 

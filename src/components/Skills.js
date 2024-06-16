@@ -189,14 +189,14 @@ return (
                 <CarouselItem title={"Learning New Things".toUpperCase()} gaugeNum={gauge100}></CarouselItem>
             </Carousel>
             <Row className="top-padding left" xs={12} md={6} xl={6}>
-                <h3>Programming Languages</h3>
+                <h3 className="top-padding-20">Programming Languages</h3>
                 <SkillPiece displayTitle="Python" img={python}></SkillPiece>
                 <SkillPiece displayTitle="Java" img={java} round={true}></SkillPiece>
                 <SkillPiece displayTitle="C" img={c}></SkillPiece>
                 <SkillPiece displayTitle="Bash" img={bash}></SkillPiece>
             </Row>
             <Row className="top-padding left" xs={12} md={6} xl={6}>
-                <h3>Web Development</h3>
+                <h3 className="top-padding-20">Web Development</h3>
                 <SkillPiece displayTitle="HTML" img={html}></SkillPiece>
                 <SkillPiece displayTitle="CSS" img={css}></SkillPiece>
                 <SkillPiece displayTitle="JavaScript" img={javascript}></SkillPiece>
