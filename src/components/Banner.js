@@ -2,6 +2,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { useState, useEffect } from "react";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headShot from '../assets/img/headshot.jpg';
+import { personalDescription } from "../static/Info";
 
 export const Banner = () => {
 
@@ -54,7 +55,7 @@ export const Banner = () => {
                     <Col lg={9}>
                         <h1>Hello World! <br></br> I'm Sophia Ruduke</h1>
                         {/* <div style={{height: '5em'}}><h2 style={{height: '100%'}}>{text}</h2></div> */}
-                        <div style={{height: "5vh"}}><h2>{text}</h2></div>
+                        <div style={{height: "10vh"}}><h2>{text}</h2></div>
                     </Col>
                     <Col className="justify-content-left">
                         <img src={headShot} alt="developer" className="img-fluid" />
@@ -62,7 +63,7 @@ export const Banner = () => {
                 </Row>
                 <Row style={{paddingTop: "8vh", paddingBottom: "15vh"}}>
                     <Col>
-                        <p>Hi, I'm Sophia Ruduke. I just received my BSc in Computing Science with Specialization at the University of Alberta.   a software developer based in Nairobi, Kenya. I have a passion for web development and love to create web applications that are user-friendly and visually appealing. I have experience working with JavaScript, React, Node.js, and MongoDB. I am always eager to learn new technologies and improve my skills.</p>
+                        <p>{personalDescription}</p>
                     </Col>
                 </Row>
             </Container>

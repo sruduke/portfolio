@@ -369,19 +369,24 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: -60px;
   width: 100%;
   padding: 4em;
+  align-items: center;
+  justify-content: center;
 }
 .skill h2 {
 	font-size: 45px;
 	font-weight: 700;
 }
 .skill p {
+    width: 95%;
+    padding-top: 1.5em;
     color: #B8B8B8;
     font-size: 18px;
     letter-spacing: 0.8px;
     line-height: 1.5em;
-    margin: 14px 0 75px 0;
+    margin-left: 2.5%;
 }
 .skill-slider {
+  padding-top: 5em;
   width: 90%;
   margin: 0 auto;
   position: relative;
@@ -485,12 +490,17 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .top-padding {
-  padding-top: 250px;
+  padding-top: 10em;
   /* margin-top: 50px; */
 }
 
 .top-padding-20 {
   padding-top: 1.5em;
+  /* margin-top: 50px; */
+}
+
+.top-padding-40 {
+  padding-top: 2.7em;
   /* margin-top: 50px; */
 }
 

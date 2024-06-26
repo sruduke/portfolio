@@ -36,6 +36,7 @@ import ignition from '../assets/img/ignition.svg';
 import tailscale from '../assets/img/tailscale.jpeg';
 import vyos from '../assets/img/vyos.png';
 
+import { skillsDescription } from '../static/Info';
 
 const SkillPiece = ({displayTitle, img, round=false}) => {
     if (round) {
@@ -175,7 +176,7 @@ return (
     <section className="skill" id="skills">
         <div className="skill-bx wow zoomIn">
             <h2>Skills</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
+            <p>{skillsDescription}</p>
             <Carousel customLeftArrow={<CustomLeftArrow />} customRightArrow={<CustomRightArrow />} responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                 <CarouselItem title={"Procedural Programming".toUpperCase()} gaugeNum={gauge95}></CarouselItem>
                 <CarouselItem title={"Object-Oriented Programming".toUpperCase()} gaugeNum={gauge85}></CarouselItem>
@@ -188,14 +189,14 @@ return (
                 <CarouselItem title={"Virtualization".toUpperCase()} gaugeNum={gauge90}></CarouselItem>
                 <CarouselItem title={"Learning New Things".toUpperCase()} gaugeNum={gauge100}></CarouselItem>
             </Carousel>
-            <Row className="top-padding left" xs={12} md={6} xl={6}>
+            <Row className="top-padding left" xs={12} md={8} xl={6}>
                 <h3 className="top-padding-20">Programming Languages</h3>
                 <SkillPiece displayTitle="Python" img={python}></SkillPiece>
                 <SkillPiece displayTitle="Java" img={java} round={true}></SkillPiece>
                 <SkillPiece displayTitle="C" img={c}></SkillPiece>
                 <SkillPiece displayTitle="Bash" img={bash}></SkillPiece>
             </Row>
-            <Row className="top-padding left" xs={12} md={6} xl={6}>
+            <Row className="top-padding left" xs={12} md={8} xl={6}>
                 <h3 className="top-padding-20">Web Development</h3>
                 <SkillPiece displayTitle="HTML" img={html}></SkillPiece>
                 <SkillPiece displayTitle="CSS" img={css}></SkillPiece>
@@ -211,18 +212,18 @@ return (
                 <SkillPiece displayTitle="MongoDB" img={mongodb}></SkillPiece>
             </Row>
             <Row className="top-padding left" xs={16} md={8} xl={6}>
-                <h3 className="top-padding-20">Virtualization</h3>
+                <h3 className="top-padding-40">Virtualization</h3>
                 <SkillPiece displayTitle="Docker" img={docker}></SkillPiece>
                 <SkillPiece displayTitle="Proxmox" img={proxmox}></SkillPiece>
-                <h3 className="top-padding-20">Automation</h3>
+                <h3 className="top-padding-40">Automation</h3>
                 <SkillPiece displayTitle="Ignition" img={ignition}></SkillPiece>
                 <SkillPieceInverted displayTitle="Ansible" img={ansible}></SkillPieceInverted>
             </Row>
             <Row className="top-padding left" xs={16} md={8} xl={6}>
-                <h3 className="top-padding-20">Networking</h3>
+                <h3 className="top-padding-40">Networking</h3>
                 <SkillPieceInverted displayTitle="Tailscale" img={tailscale} round={true}></SkillPieceInverted>
                 <SkillPiece displayTitle="Vyos" img={vyos} round={true}></SkillPiece>
-                <h3 className="top-padding-20">Packaging</h3>
+                <h3 className="top-padding-40">Packaging</h3>
                 <SkillPiece displayTitle="Maven" img={maven}></SkillPiece>
                 <SkillPiece displayTitle="Gradle" img={gradle} round={true}></SkillPiece>
             </Row>
