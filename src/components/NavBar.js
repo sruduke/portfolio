@@ -41,7 +41,7 @@ export const NavBar = () => {
             <div className="social-icon">
                 <a href="https://ca.linkedin.com/in/sophia-ruduke-56599522a"><img style={{width: '50%'}} src={linkedin} alt="" /></a>
                 <a href="https://github.com/sruduke"><img src={github} alt=""/></a>
-                <a href="" data-tooltip-id="my-tooltip" data-tooltip-place="bottom" data-tooltip-content={"Copy email to clipboard"}><img onClick={copyToClipboard} src={email}></img></a>
+                <a data-tooltip-id="my-tooltip" data-tooltip-place="bottom" data-tooltip-content={"Copy email to clipboard"}><img onClick={copyToClipboard} src={email}></img></a>
                 <Tooltip id="my-tooltip" />
             </div>
           </Container>

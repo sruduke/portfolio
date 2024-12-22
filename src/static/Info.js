@@ -11,14 +11,14 @@ export const skillsDescription = "I have developed a robust skill set through my
 export const projects = [
         {title: 'Baseball App',
         image: baseball,
-        description: 'This app was built as a project in Ignition to showcase how SCADA software can be used beyond industry. It  ',
-        technologies: ['Ignition', 'MariaDB', 'Docker', 'Jython', 'OBS'],
+        description: 'This app was built as a project in Ignition to showcase how SCADA software can be used beyond industry. It is heavily influenced by Game Changer, as it features a live game feed, realtime game scoring, player stats and management, and a game schedule. The app is also integrated with an OBS overlay to display a scoreboard on streams, powered by the realtime game scoring. The motivation to build this app was to provide an easier place for family and friends to view baseball games, since this allows for games to be streamed on available platforms such as Youtube. As well, it provides a platform for coaches to manage their teams, players, and games while keeping families in the loop.',
+        technologies: ['Ignition', 'MariaDB', 'SQL', 'Docker', 'Jython', 'OBS'],
         modalImages: [baseball]},
 
         {title: 'Alarm Rationalization',
         image: alarmrat,
-        description: 'This is a project',
-        technologies: ['Ignition', 'MariaDB', 'Docker', 'Excel', 'Jython'],
+        description: "Alarm rationalization is the process of reviewing and optimizing alarms in an industrial system to ensure each alarm is necessary, prioritized, and actionable, thereby reducing operator overload and improving overall safety and efficiency. I reworked a Java module for Ignition and built an Ignition Perspective Project to assist in the alarm rationalization process and adhere to the ISA 18.2 and IEC62682 directives. It has automatic SQL database deployment to manage alarm history and version control. It ensures that only authorized engineers or administrators can make changes, with unauthorized modifications being easily detected. The tool integrates with Excel using Apache POI to generate custom-built sheets based on the alarm philosophy, enabling the templating of the alarm configuration process and significantly reducing manual entry time. The tool also allows customization and modularization of a company's alarm philosophy while monitoring and optimizing alarm performance with developed KPIs.",
+        technologies: ['Ignition', 'SQL', 'Docker', 'Excel', 'Jython'],
         modalImages: [alarmrat]},
 
         {title: 'ChimpChat',
