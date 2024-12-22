@@ -1,14 +1,31 @@
 import Modal from 'react-bootstrap/Modal';
-import { Container, Row, Col, Image} from "react-bootstrap";
+import { Container} from "react-bootstrap";
+import { useState, useEffect } from "react";
 
 export const ProjectModal = ({title, description, technologies, images, show, onHide}) => {
+  
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Used to resize modal on mobile
+  useEffect(() => {
+      const handleResize = () => {
+          setIsMobile(window.innerWidth <= 600);
+      };
+
+      handleResize();
+      window.addEventListener('resize', handleResize);
+
+      return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  
   return (
     <Modal
-      className="project-modal"
+      className={isMobile ? "project-modal-mobile" : "project-modal"}
       size="lg"
       aria-labelledby="contained-modal-title-vcenter"
-      centered
       show={show}
+      // scrollable={true}
+      centered={true}
       onHide={onHide}
     >
       <Container className="project-popup">
@@ -31,9 +48,7 @@ export const ProjectModal = ({title, description, technologies, images, show, on
             })}
         </ul>
         {images.map((image, index) => {
-          return (
-            <img key={index} src={image} />
-          )
+          return isMobile ? null : <img key={index} src={image} alt={""}/>;
         })}
       </Modal.Body>
       {/* <Modal.Footer> */}

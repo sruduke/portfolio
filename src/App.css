@@ -614,8 +614,14 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .project-modal {
-  margin-top: 4%;
+  margin-top: 5%;
   padding-bottom: 5%;
+}
+
+.project-modal-mobile {
+  margin-top: 25%;
+  margin-bottom: 25%;
+  max-height: 80%;
 }
 
 .project-modal h4 {
