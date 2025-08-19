@@ -1,0 +1,87 @@
+#root {
+  max-width: 100vw;
+  overflow-x: hidden;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* In your app.css file */
+.animated-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.animated-border::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(45deg, #ff0080, #8000ff, #00ff80, #ff0080);
+  background-size: 400% 400%;
+  z-index: -1;
+  border-radius: 1.5rem; /* Matches rounded-3xl */
+  animation: glowing 10s linear infinite;
+}
+
+@keyframes glowing {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* .social-icon a:hover img {
+	filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
+} */
+
+.proj-imgbx {
+  display: flex;
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  box-shadow: 0 0 20px rgba(201, 83, 255, 0.5);
+  width: 50vh;
+  height: 25vh;
+}
+
+.proj-imgbx::before {
+  content: "";
+  background: linear-gradient(90.21deg, #3683aa -5.91%, #2f49bd 111.58%);
+  opacity: 0.85;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  transition: 0.4s ease-in-out;
+}
+.proj-imgbx:hover::before {
+  height: 100%;
+}
+.proj-txt {
+  position: absolute;
+  text-align: center;
+  color: white;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  width: 100%;
+}
+.proj-imgbx:hover .proj-txt {
+  top: 50%;
+  opacity: 1;
+}
+.proj-txt h4 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.1em;
+}
+.proj-txt span {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+}
