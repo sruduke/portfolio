@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { AnimatedBackground } from 'animated-backgrounds';
 
 // Mock data for demonstration
 const skillsDescription = "I have extensive experience across multiple programming languages, frameworks, and technologies. My expertise spans from backend development to system administration, with a passion for learning and implementing new technologies.";
@@ -407,7 +408,11 @@ const SimpleCarousel = ({ items }) => {
 
 export const Skills = () => {
   return (
-    <section className="min-h-screen py-20 w-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-white" id="skills">
+      <section className="min-h-screen py-20 w-full text-white" id="skills">
+      
+      {/* Fallback gradient background */}
+      {/* <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 -z-10" /> */}
+
       <div className="max-w-7xl mx-auto">
         <div className="bg-gradient-to-br from-gray-800/60 to-gray-900/60 backdrop-blur-sm rounded-3xl border border-gray-700/30 shadow-2xl overflow-hidden">
           

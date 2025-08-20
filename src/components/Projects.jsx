@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { projects } from '../static/Info'
-
+import { AnimatedBackground } from 'animated-backgrounds';
 import { ChevronDown, ChevronUp, ExternalLink, Github } from 'lucide-react';
 
 const ProjectCard = ({ project, isExpanded, onToggle }) => {
     return (
-        <div className="bg-gray-800 rounded-xl overflow-hidden shadow-xl transition-all duration-300 hover:shadow-2xl">
+        <div className="bg-gray-800 rounded-xl overflow-hidden shadow-xl transition-all duration-300 z-10 hover:shadow-2xl">
+            
             {/* Project Image */}
             <div className="relative overflow-hidden">
                 <img 
@@ -127,8 +128,25 @@ export const Projects = () => {
     };
 
     return (
-        <section className="projects py-20 px-4 bg-gray-900 min-h-screen w-full" id="projects">
-            <div className="max-w-7xl mx-auto">
+        <section className="projects py-20 px-4 relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-black/50 to-gray-900/10" id="projects">
+            {/* Animated Background */}
+            <AnimatedBackground 
+                animationName="matrixRain"
+                theme="gaming"
+                fps={30}
+                style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    zIndex: -1,
+                    filter: 'hue-rotate(130deg)',
+                    opacity: 0.75
+                }}
+            />
+      
+            <div className="max-w-7xl mx-auto z-10">
                 <div className="text-center mb-16">
                     {/* <h2 className="text-4xl md:text-5xl font-bold pb-10 bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent"> */}
                     <h2 className="text-4xl md:text-5xl font-bold pb-10 text-white">
